@@ -21,43 +21,44 @@
         left: 0;
         right: 0;
         bottom: 4px;
-        background-color: red;
+        background-color: rgb(255, 170, 59);
         transform-origin: 0 50%;
         transform: scaleX(0);
-        /* Complete the animation rules to fulfill the specificiations */
         animation-name: swipe-bg;
-        animation-duration: 2s;
+        animation-duration: 8s;
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite;
       }
 
       @keyframes swipe-bg {
-        /* Complete the keyframes to fulfill the specificiations */
-        from {
-          transform: scaleX(0);
+        0% {
+          transform: scale(0, 0.025);
         }
-        to {
-          transform: scaleX(1);
+        30% {
+          transform: scale(1, 0.025);
+        }
+        60% {
+          transform: scale(1, 1);
+        }
+        100% {
+          transform: scale(1, 1);
         }
       }
       .svgwaves {
-        /* Complete the animation rules to fulfill the specificiations */
         stroke-dasharray: 5400;
-        stroke-dashoffset: 5400;
         animation-name: draw-and-fill;
-        fill: aqua;
-        animation-duration: 5s;
-        animation-direction: alternate;
+        stroke-width: 2;
+        fill: rgb(39, 68, 150);
+        animation-duration: 8s;
         animation-iteration-count: infinite;
       }
 
       @keyframes draw-and-fill {
-        /* Complete the keyframes to fulfill the specificiations */
         0% {
           stroke-dashoffset: 5400;
           fill-opacity: 0;
         }
-        75% {
+        50% {
           stroke-dashoffset: 0;
           fill-opacity: 0;
         }
