@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        position: relative;
+      }
+
+      header:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 4px;
+        background-color: red;
+        transform-origin: 0 50%;
+        transform: scaleX(0);
+        /* Complete the animation rules to fulfill the specificiations */
+        animation-name: swipe-bg;
+        animation-duration: 2s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes swipe-bg {
+        /* Complete the keyframes to fulfill the specificiations */
+        from {
+          transform: scaleX(0);
+        }
+        to {
+          transform: scaleX(1);
+        }
+      }
+      .svgwaves {
+        /* Complete the animation rules to fulfill the specificiations */
+        stroke-dasharray: 5400;
+        stroke-dashoffset: 5400;
+        animation-name: draw-and-fill;
+        fill: aqua;
+        animation-duration: 5s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes draw-and-fill {
+        /* Complete the keyframes to fulfill the specificiations */
+        0% {
+          stroke-dashoffset: 5400;
+          fill-opacity: 0;
+        }
+        75% {
+          stroke-dashoffset: 0;
+          fill-opacity: 0;
+        }
+        100% {
+          stroke-dashoffset: 0;
+          fill-opacity: 100;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <section>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path fill="none" fill-opacity="1" stroke="#0099ff" class="svgwaves"
+          d="M0,128L160,64L320,160L480,192L640,32L800,64L960,64L1120,192L1280,128L1440,320L1440,320L1280,320L1120,320L960,320L800,320L640,320L480,320L320,320L160,320L0,320Z"></path>
+        </svg>
+      </section>
+    </header>
+  </body>
+</html>
